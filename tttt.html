@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
+<title>
+document1
+</title>
+<link rel='stylesheet' href='bootstrap.css'>
+<script src='jquery.js'></script>
+<link href="testcss.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row" style="background-color:lightyellow;">
+        <div class="col-md-6" style="background-color:lime;">
+            Main div to be tested
+            <div class="row"style="border: 2px solid black;">
+                <div class="col-md-6" style="background-color:lightsalmon; border: 2px solid black;"><h3>Sub div -1</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In officia recusandae error nam non voluptas illum vel sit officiis atque, excepturi, natus consequuntur, ipsam iste dolorum aliquid? Praesentium, id suscipit. Sed ipsam quibusdam assumenda, impedit eum praesentium et illo dicta, quod quidem neque asperiores distinctio nam corporis voluptatem esse nisi ullam amet eaque. Doloremque voluptates consequuntur aliquid quaerat dicta. Repudiandae veritatis, similique nobis molestiae esse minima rerum, quam odio est nisi dignissimos magnam sit a sint facere voluptates quod ducimus ullam ratione? Aut quo tempore est ratione, earum sunt deserunt vel eum deleniti hic, amet explicabo voluptatibus quos iusto rem.</div>
+                <div class="col-md-6" style="background-color:lightslategray; border: 2px solid black;"><h3>Sub div -1</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem debitis eos, fuga harum explicabo eaque rem alias, officiis impedit aliquid repellat soluta molestiae repudiandae suscipit laboriosam deserunt, inventore hic? Nostrum consequatur libero veritatis quam natus eligendi totam sequi inventore accusantium.</div>
+            </div>
+        </div>
+        <div class="col-md-6" id="target"> Target Div for AJAX
+            <button id="but"> click to Load AJAX</button>   
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#but").click(function(){
+            $("#target").load("AppOnGit.HTML", function(responseTxt, statusTxt, xhr){
+                if(statusTxt == "success")
+            alert("External content loaded successfully!");
+            if(statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+            });
+        })
+    })
+    
+</script>
+</body>
+</html>

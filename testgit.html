@@ -6,66 +6,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="bootstrap.css">
         <script src="jquery.js"></script>
+        <style>
+            .col{
+                border: 2px solid black;
+            }
+            #_1{
+                background-color: brown;
+            }
+            #_2{
+                background-color: gold;
+            }
+            #_3{
+                background-color: black;
+            }
+            #_4{
+                background-color: green;
+            }
+        </style>
     </head> 
         <body >
-<div class="p-3 mb-2 bg-primary text-white">
-<script>
-obj=[{"firstName":" Abhishek", "lastName": "Mishra"},
-{"firstName":" Ab",   "lastName": "M"},
-{"firstName":" Abhi", "lastName": "M"}
-];
-for(var x=0; x<obj.length; x++){     //for loop to traverse in the array
-for(var k in obj[x]){       //for in loop to print the properties of object
-    if(obj[x].lastName=='M'){   
-    document.write(k+": " +obj[x][k]+" ");
-}}}
-var b=obj.filter(b1);        //filter always returns a new array out of exhisting array based on some condition
-function b1(obj){
-    if(obj.lastName=='M'){
-{
-console.log (obj.firstName+" "+obj.lastName);
-}}}
-document.write("<br>");
-var arr=[1,2,3,4,5];
-function arr2(arr){
-return arr*2;
-}
-var arr3=arr.map(arr2); // map performs a function on each element of array and returns the values in another array
-document.write(arr3+"<br>");
 
-let objf= (obj)=>{
-    if(obj.lastName=='M')
-    return obj.firstName+" "+obj.lastName;
-}
-var objn=obj.map(objf);
-document.write("<br>"+objn);
-let arrow=(nn)=>{if(nn==2){return "hello";}
-else { return "bye"; }    }
-console.log(arrow(1));
-//console.log(String.fromCharCode(66));   //here we give the ASCII code it return the value
-obj11= new Object;
-obj11.firstName='Abhishek';
-obj11.lastName='Mishra';
-obj11.fullName=obj11.firstName+" "+obj11.lastName;
-for(var key in obj11){
-document.write(key+" "+obj11[key]+"<br>");
-}
-arrobj=[{"name":"xender"},
-        {"name":"John"},
-        {"name":"Remy"}];
-for(var x=0; x<3; x++){     //for loop to traverse in the array
-for(var k in arrobj[x]){       //for in loop to print the properties of object
-       
-    document.write(k+": " +arrobj[x][k]+" <br>");
-}}
-arrobj.push("lastName","feng")
- document.write(arrobj[4]);
- function test(){
-
- }
-</script>
+<div class="container bg-primary text-white row">
+<div class="row">
+<div class="col order-lg-last" id="_1"> Column 1</div>
+<div class="col order-lg-3" id="_2"> Column 2</div>
+<div class="col order-lg-first" id="_3"> Column 3</div>
+<div class="col" id="_4"> Column 4</div>
 </div>
-<button type="button" class="btn-primary" onclick=test()> click to load js</button>
-<script src="testjs.js"></script>
+<label>Search box</label><input type="search">
+<br><br>
+<label>Date</label><input type="date"/>
+<br><br>
+<label>Datetime-local</label><input type="datetime-local"/>
+<br><br>
+<label>E-mail</label><input type="email"/>
+<br><br>
+<button type="submit">Submit</button>
+<audio controls loop muted>
+    <source src="resources/Bad.mp3" type="audio/mpeg">
+</audio>
+<video controls loop autoplay muted>
+    <source src="resources/vid.mp4" type="video/mp4">
+</video>
+</div>
 </body>
 </html> 
